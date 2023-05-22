@@ -1,0 +1,29 @@
+LOGIN.html
+
+<script>
+            const bubleCreate=()=>{
+                // GET body ELEMENT
+                const body = document.body
+                // MAKE BUBBLE ELEMENT
+                const buble = document.createElement('span')
+                // SET BUBBLE RADIUS
+                let r = Math.random()*5 + 25 //RADIUS SIZE = 25~30
+                // SET BUBBLE W AND H
+                buble.style.width=r+'px'
+                buble.style.height=r+'px'
+                // BUBBLE RANDOM STARTED PLACE
+                buble.style.left=Math.random()*innerWidth+'px'
+                // ADD BUBBLE ELEMENT FOR BODY
+                body.append(buble)
+                // 4S = CLEAR THE BUBBLE
+                setTimeout(()=>{
+                    buble.remove()
+                },4000)
+            }
+            // PER/200ms GENERATE A BUBBLE
+            setInterval(() => {
+                bubleCreate()
+            }, 200);
+        </script>
+
+
