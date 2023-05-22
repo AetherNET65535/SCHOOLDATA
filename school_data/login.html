@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- insert css file -->
+        <link rel="stylesheet" href="./login.css">
+        <!-- insert jquery -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <title>LOGIN</title>
+    </head>
+    <body>
+        <!-- outsidest box -->
+       <div class="box">
+        <!-- sliding box -->
+        <div class="pre-box">
+            <h1>WELCOME</h1>
+            <p>JOIN US!</p>
+            <div class="img-box">
+                <img src="./img/waoku.jpg" alt="">
+            </div>
+        </div>
+        <!-- register box -->
+        <div class="register-form">
+            <!-- title box -->
+            <div class="title-box">
+                <h1>REGISTER</h1>
+            </div>
+            <!-- input box -->
+            <div class="input-box">
+                <input type="text" placeholder="USERNAME">
+                <input type="password" placeholder="PASSWORD">
+                <input type="password" placeholder="RE-TYPE PASSWORD">
+            </div>
+            <!-- button box -->
+            <div class="btn-box">
+                <button>REGISTER</button>
+                <!-- HAVE ACC OR NO ACC? -->
+                <p onclick="mySwitch()">HAVE ACCOUNT ALREADY? GO LOGIN</p>
+            </div>
+        </div>
+        <!-- LOGIN BOX -->
+        <div class="login-form">
+            <!-- TITLE BOX -->
+            <div class="title-box">
+                <h1>LOGIN</h1>
+            </div>
+            <!-- INPUT BOX -->
+            <div class="input-box">
+                <input type="text" placeholder="USERNAME">
+                <input type="password" placeholder="PASSWORD">
+            </div>
+            <!-- BUTTON BOX -->
+            <div class="btn-box">
+                <button>LOGIN</button>
+                <!-- NO HAVE ACC? GO REGISTER -->
+                <p onclick="mySwitch()">NO HAVE ACCOUNT? GO REGISTER</p>
+            </div>
+        </div>
+       </div>
+       <script>
+            // SLIDING STATUS
+             let flag=true
+             const mySwitch=()=>{
+                if(flag){
+                    // GET SLIDING BOXS dom ELEMENT THEN MOVE
+                    $(".pre-box").css("transform","translateX(100%)")
+                    // GET SLIDING BOXS dom ELEMENT THEN CHANGE THE BG COLOUR
+                    $(".pre-box").css("background-color","#c9e0ed")
+                    //CHANGE THE PIC PATH
+                    $("img").attr("src","./img/wuwu.jpeg")
+                    
+                }
+                else {
+                    $(".pre-box").css("transform","translateX(0%)")
+                    $(".pre-box").css("background-color","#edd4dc")
+                    $("img").attr("src","./img/waoku.jpg")
+                }
+                flag=!flag
+             }
+       </script>
+       <script>
+            const bubleCreate=()=>{
+                // GET body ELEMENT
+                const body = document.body
+                // MAKE BUBBLE ELEMENT
+                const buble = document.createElement('span')
+                // SET BUBBLE RADIUS
+                let r = Math.random()*5 + 25 //RADIUS SIZE = 25~30
+                // SET BUBBLE W AND H
+                buble.style.width=r+'px'
+                buble.style.height=r+'px'
+                // BUBBLE RANDOM STARTED PLACE
+                buble.style.left=Math.random()*innerWidth+'px'
+                // ADD BUBBLE ELEMENT FOR BODY
+                body.append(buble)
+                // 4S = CLEAR THE BUBBLE
+                setTimeout(()=>{
+                    buble.remove()
+                },4000)
+            }
+            // PER/200ms GENERATE A BUBBLE
+            setInterval(() => {
+                bubleCreate()
+            }, 200);
+        </script>
+    </body>
+</html>

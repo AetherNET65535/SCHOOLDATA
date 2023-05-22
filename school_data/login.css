@@ -1,0 +1,248 @@
+* {
+    /* 	REMOVE THE BROSWERS DEFAULT INNER AND OUTER DISTANCES */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REMOVE THE OUTLINE OF THE INPUT */
+input {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* HIDE-OVERFLOW */
+    overflow-x: hidden;
+    display: flex;
+    /* GRADIENT DIRECTION LEFT TO RIGHT */
+    background: linear-gradient(to right, rgb(247, 209, 215), rgb(191, 227, 241));
+}
+
+span {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    border-radius: 50%;
+    /* RADIAL GRADIENT */
+    background: radial-gradient(circle at 72% 28%, #fff 3px, #ff7edf 8%, #5b5b5b, #aad7f9 100%);
+    /* SHADOW IN BUBBLE  */
+    box-shadow: inset 0 0 6px #fff,
+        inset 3px 0 6px #eaf5fc,
+        inset 2px -2px 10px #efcde6,
+        inset 0 0 60px #f9f6de,
+        0 0 20px #fff;
+    /* ANIMATION */
+    animation: myMove 4s linear infinite;
+}
+
+
+@keyframes myMove {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(10%, -1000%);
+    }
+
+    75% {
+        transform: translate(-20%, -1200%);
+    }
+
+    99% {
+        opacity: .9;
+    }
+
+    100% {
+        transform: translateY(-1800%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* OUTSIDEST BOX */
+.box {
+    width: 1050px;
+    height: 600px;
+    display: flex;
+    /* RELATIVE POSITION */
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    /* SET ROUNDED CORNERS */
+    border-radius: 8px;
+    /* SET BORDER */
+    border: 1px solid rgba(255, 255, 255, .6);
+    /* SET BOX SHADOW */
+    box-shadow: 2px 1px 19px rgba(0, 0, 0, .1);
+}
+
+/* SLIDINGS BOX */
+.pre-box {
+    /* WIDTH = BIG BOX / 2 */
+    width: 50%;
+    /* width: var(--width); */
+    height: 100%;
+    /* ABSOLUTE POSITION */
+    position: absolute;
+    /* DISTANCE TO THE LEFT OF THE BIG BOX IS 0 */
+    left: 0;
+    /* DISTANCE TO THE TOP OF THE BIG BOX IS 0 ALSO */
+    top: 0;
+    z-index: 99;
+    border-radius: 4px;
+    background-color: #edd4dc;
+    box-shadow: 2px 1px 19px rgba(0, 0, 0, .1);
+    /* ANIMATION,SLOW THEN FAST */
+    transition: 0.5s ease-in-out;
+}
+
+/* SLIDING BOXS TITLE */
+.pre-box h1 {
+    margin-top: 150px;
+    text-align: center;
+    /* WORDS AND WORDS(DISTANCE) */
+    letter-spacing: 5px;
+    color: white;
+    /* CANT SELECT */
+    user-select: none;
+    /* WORD SHADOW */
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, .1);
+}
+
+/* TEXT OF SLIDING BOX */
+.pre-box p {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 20px 0;
+    /* CANT SELECT */
+    user-select: none;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, .1);
+}
+
+/* IMAGE BOX */
+.img-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    /* SET IT TO CIRCLE */
+    border-radius: 50%;
+    /* SET USER CANT SELECT IT */
+    user-select: none;
+    overflow: hidden;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, .1);
+}
+
+/* IMAGE */
+.img-box img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* LOGIN AND REGISTER BOX */
+.login-form,
+.register-form {
+    flex: 1;
+    height: 100%;
+}
+
+/* TITLE BOX */
+.title-box {
+    height: 300px;
+    line-height: 500px;
+
+}
+
+/* TITLE */
+.title-box h1 {
+    text-align: center;
+    color: white;
+    /* CANT SELECT */
+    user-select: none;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, .1);
+
+}
+
+/* INPUT BOX */
+.input-box {
+    display: flex;
+    /* VERTICAL LAYOUT */
+    flex-direction: column;
+    /* HORIZON CENTER */
+    align-items: center;
+}
+
+/* INPUT BOX */
+input {
+    width: 60%;
+    height: 40px;
+    margin-bottom: 20px;
+    text-indent: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 120px;
+    /* ADD SAND */
+    backdrop-filter: blur(10px);
+}
+
+input:focus {
+    /* CURSOR COLOUR */
+    color: #b0cfe9;
+
+}
+
+/* FOCUS = HIDE TEXT */
+input:focus::placeholder {
+    opacity: 0;
+}
+
+/* BUTTON BOX */
+.btn-box {
+    display: flex;
+    justify-content: center;
+}
+
+/* BUTTON */
+button {
+    width: 100px;
+    height: 30px;
+    margin: 0 7px;
+    line-height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #69b3f0;
+    color: white;
+}
+
+/* WHEN BUTTON STOP */
+button:hover {
+    /* CURSOR */
+    cursor: pointer;
+    /* OPACITY */
+    opacity: .8;
+}
+
+/* BUTTON TEXT */
+.btn-box p {
+    height: 30px;
+    line-height: 30px;
+    /* CANT SLECT */
+    user-select: none;
+    font-size: 14px;
+    color: white;
+
+}
+
+.btn-box p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
