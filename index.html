@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<body>
+    
+    <style>
+        #banner {
+          position: relative;
+          background-image: linear-gradient(to top right, #0000FF, #FF0000);
+          width: auto;
+          height: 320px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+        }
+        
+        .title {
+          margin: 0 250px;
+          font-size: 120px;
+          color: white;
+          font-family: "Roboto Mono", monospace;
+        }
+        
+        .logo {
+          width: 359px;
+          height: auto;
+          position: relative;
+          z-index: 1;
+        }
+        
+        .logo::before {
+          content: "";
+          position: absolute;
+          top: calc(50% - 40%);
+          left: calc(50% - 40%);
+          width: 80%;
+          height: 80%;
+          border-radius: 50%;
+          border: 10px solid white;
+          box-sizing: border-box;
+          z-index: -1;
+        }
+        
+        .line {
+            position: absolute;
+            bottom: 250px;
+            left: 10px;
+            width: 5px;
+            height: 275px;
+            background-color: black;
+        }
+
+        .box {
+            background-image:linear-gradient(to bottom right, #D7EAD6, #D7EAD6) ;
+            position: absolute;
+            bottom: 250px;
+            left: 30px; 
+            width: 240px; 
+            height: 275px; 
+            background-color: transparent;
+            z-index: -1; 
+        }
+
+        .image-wrapper {
+            position: absolute;
+            bottom: 350px;
+            left: 80px; 
+            width: 145px; 
+            height: 153px; 
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .usrn-box{
+            position: absolute;
+            bottom: 265px;
+            left: 30px;
+            width: 240px;
+            height: 82px;
+            background-color: #FF0000;
+        }
+
+        .usrn{
+            position: absolute;
+            bottom: 215px;
+            left: 75px;
+            font-size: 64px;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            
+        }
+
+        .about-us{
+            position: absolute ;
+            bottom: 410px;
+            left: 300px;
+            font-size: 60px;
+            color:black ;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        }
+
+        .au-text{
+            width: 1128px;
+            height: 240px;
+            overflow: auto;
+            position: absolute;
+            bottom: 193px;
+            left: 300px;
+            font-size: 24px;
+            color: black;
+            font-family:monospace
+        }
+
+        .ad-00{
+            position: absolute;
+            bottom: 270px;
+            left: 1545px;
+            width: 365px;
+            height: 275px;
+            background-color:darkred;
+        }
+
+        .adt-00{
+            position: absolute;
+            bottom: 270px;
+            left: 1660px;
+            font-size: 96px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .shortcut-box{
+            position: absolute;
+            bottom: 20px;
+            left: 200px;
+            width: 572px;
+            height: 752px;
+            background-color: red;
+        
+        }
+    
+        </style>                    
+
+        <div id="banner">
+        <h1 class="title">NAME</h1>
+        <img src="img/cloud.png" class="logo">
+        <h1 class="title">NAME</h1>
+        </div>
+        <div class="line"></div>
+        <div class="box"></div>
+        <div class="image-wrapper">
+            <img src="FOR ADMIN/pfp.png" alt="Image">
+        </div>
+        <div class="usrn-box"></div>
+        <h2 class="usrn">NAVI</h2>
+        <h2 class="about-us">ABOUT US</h2>
+        <h2 class="au-text">This website is made for STUDENTS, 
+                            idk which shcool lah, i can't know which shcool,
+                            or that principal will kill me lol. I'll (or our?)
+                            put some nice things in this website, just for STUDENTS.
+                            Hope STUDENTS will be queit, dont say with any teacher,
+                            or this website will dead(maybe?)</h2>
+        <div class="ad-00"></div>                    
+        <h2 class="adt-00">AD</h2>
+        <div class="shortcut-box"></div>
+        
+</body>
+</html>
